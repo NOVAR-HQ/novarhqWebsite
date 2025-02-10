@@ -8,80 +8,101 @@
         /* Typography */
         @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
 
+        :root {
+            --primary-color: #0066ff;
+            --hover-color: #0046b3;
+            --background-color: #141e30;
+            --text-color: #ffffff;
+            --text-secondary: #cccccc;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Aptos', sans-serif;
             margin: 0;
             padding: 0;
-            background: #141e30;
-            color: #fff;
+            background: var(--background-color);
+            color: var(--text-color);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             text-align: center;
+            overflow-x: hidden;
         }
 
         header {
             width: 100%;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
         }
 
         header img {
-            max-width: 100%;
+            max-width: 150px;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         header h1 {
-            font-family: 'Aptos', sans-serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
-            margin: 0;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         header p {
-            font-family: Arial, sans-serif;
             font-size: 1.2rem;
-            color: #ccc;
+            color: var(--text-secondary);
+            margin: 5px 0 30px;
         }
 
         .link-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
             width: 90%;
             max-width: 400px;
-            margin-top: 30px;
+            animation: fadeIn 1.2s ease-in-out;
         }
 
         .link {
             text-decoration: none;
-            font-family: 'Aptos', sans-serif;
-            color: #fff;
-            background: #0066ff;
+            color: var(--text-color);
+            background: var(--primary-color);
             padding: 15px;
-            border-radius: 8px;
+            border-radius: 12px;
             font-size: 1.2rem;
             font-weight: bold;
+            box-shadow: 0 8px 12px var(--shadow-color);
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-transform: capitalize;
         }
 
         .link:hover {
-            background: #0046b3;
-            transform: scale(1.05);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+            background: var(--hover-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
         }
 
         footer {
             margin-top: 40px;
             font-size: 0.9rem;
-            font-family: Arial, sans-serif;
-            color: #aaa;
+            color: var(--text-secondary);
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive Design */
@@ -94,13 +115,17 @@
                 font-size: 1rem;
                 padding: 12px;
             }
+
+            header img {
+                max-width: 120px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <!-- Add your banner -->
-        <img src="NovarBanner3v1.png" alt="NOVAR Banner">
+        <img src="Novarlogo3v1.png" alt="NOVAR Logo">
         <h1>NOVAR</h1>
         <p>Where Art Meets Science</p>
     </header>
