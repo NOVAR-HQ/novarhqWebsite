@@ -1,4 +1,15 @@
-:root {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVAR | Where Art Meets Science</title>
+    <style>
+        /* Typography */
+        @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
+
+        /* Default Palette: Purple Glow */
+        :root {
             /* Uncomment any palette below to try different color schemes */
 
             /* Monochrome Elegance */
@@ -49,3 +60,119 @@
             --shadow-color: rgba(20, 184, 166, 0.3);
             */
         }
+
+        body {
+            font-family: 'Aptos', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin: 5px 0 30px;
+        }
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+            max-width: 400px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .link {
+            text-decoration: none;
+            color: var(--text-color);
+            background: var(--primary-color);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 8px 12px var(--shadow-color);
+            transition: all 0.3s ease-in-out;
+            text-transform: capitalize;
+        }
+
+        .link:hover {
+            background: var(--hover-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .link {
+                font-size: 1rem;
+                padding: 12px;
+            }
+
+            header img {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Add your logo -->
+        <img src="Novarlogo3v1.png" alt="NOVAR Logo">
+        <h1>NOVAR</h1>
+        <p>Where Art Meets Science</p>
+    </header>
+    <div class="link-container">
+        <a href="https://instagram.com/novarhq" target="_blank" class="link">Instagram</a>
+        <a href="https://tiktok.com/@novarhq" target="_blank" class="l
