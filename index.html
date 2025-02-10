@@ -10,24 +10,25 @@
         @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
 
         /* Color Palette (Elegant & Simple) */
-        :root {
-            --deep-indigo: #2c234d;
-            --soft-lavender: #7b6ba3;
-            --muted-white: #f5f5f5;
-            --neutral-gray: #d4d4d4;
-            --hover-dark: #1f1a38;
-            --text-primary: #2c234d;
-            --text-secondary: #5a5377;
-            --button-bg: #7b6ba3;
-            --button-hover: #5d4d89;
-        }
+    :root {
+    --background-gradient: linear-gradient(to bottom, #2c3e50, #4a6572);
+    --deep-indigo: #2c234d;
+    --soft-lavender: #7b6ba3;
+    --muted-white: #ffffff;
+    --neutral-gray: #d4d4d4;
+    --hover-dark: #1f1a38;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --button-bg: #7b6ba3;
+    --button-hover: #5d4d89;
+}
 
         /* Global Styles */
         body {
             font-family: 'Aptos', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, var(--muted-white), var(--neutral-gray));
+            background: var(--background-gradient);
             color: var(--text-primary);
             display: flex;
             flex-direction: column;
