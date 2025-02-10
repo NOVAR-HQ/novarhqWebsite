@@ -11,18 +11,13 @@
 
         /* Color Theme */
         :root {
-            --background-gradient: linear-gradient(135deg, #0a0f1d 0%, #1a2238 100%);
+            --background-gradient: linear-gradient(135deg, #1a0739 0%, #3d0c66 50%, #6b1b91 100%);
+            --primary-purple: #6b1b91;
+            --hover-purple: #4e1369;
             --text-color: #ffffff;
             --text-secondary: #b0b3b8;
             --shadow-color: rgba(0, 0, 0, 0.4);
-
-            /* Button Colors */
-            --instagram: #E4405F;
-            --tiktok: #69C9D0;
-            --youtube: #FF0000;
-            --facebook: #1877F2;
-            --email: #FF7F50;
-            --hover-opacity: 0.9;
+            --hover-opacity: 0.85;
         }
 
         /* Global Styles */
@@ -73,9 +68,9 @@
         .link-container {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
             width: 100%;
-            max-width: 280px;
+            max-width: 230px;
             animation: fadeIn 1.2s ease-in-out;
         }
 
@@ -86,38 +81,34 @@
             justify-content: center;
             text-decoration: none;
             color: var(--text-color);
-            padding: 12px;
-            font-size: 1rem;
+            background: var(--primary-purple);
+            padding: 10px;
+            font-size: 0.95rem;
             font-weight: bold;
-            border-radius: 6px;
+            border-radius: 4px;
             transition: all 0.3s ease-in-out;
             text-transform: capitalize;
-            box-shadow: 0 4px 8px var(--shadow-color);
+            box-shadow: 0 3px 6px var(--shadow-color);
+            width: 100%;
         }
 
         .link i {
-            margin-right: 10px;
-            font-size: 1.2rem;
+            margin-right: 8px;
+            font-size: 1rem;
         }
-
-        /* Individual Button Colors */
-        .instagram { background: var(--instagram); }
-        .tiktok { background: var(--tiktok); }
-        .youtube { background: var(--youtube); }
-        .facebook { background: var(--facebook); }
-        .email { background: var(--email); }
 
         /* Hover Effects */
         .link:hover {
+            background: var(--hover-purple);
             opacity: var(--hover-opacity);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         /* Footer */
         footer {
             margin-top: 40px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
             opacity: 0.8;
         }
@@ -142,7 +133,7 @@
 
             .link {
                 font-size: 0.9rem;
-                padding: 10px;
+                padding: 9px;
             }
 
             header img {
@@ -161,19 +152,19 @@
 
     <!-- Social Media Links -->
     <div class="link-container">
-        <a href="https://instagram.com/novarhq" target="_blank" class="link instagram">
+        <a href="https://instagram.com/novarhq" target="_blank" class="link">
             <i class="fab fa-instagram"></i> Instagram
         </a>
-        <a href="https://tiktok.com/@novarhq" target="_blank" class="link tiktok">
+        <a href="https://tiktok.com/@novarhq" target="_blank" class="link">
             <i class="fab fa-tiktok"></i> TikTok
         </a>
-        <a href="https://youtube.com/@novarhq" target="_blank" class="link youtube">
+        <a href="https://youtube.com/@novarhq" target="_blank" class="link">
             <i class="fab fa-youtube"></i> YouTube
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61572770470991" target="_blank" class="link facebook">
+        <a href="https://www.facebook.com/profile.php?id=61572770470991" target="_blank" class="link">
             <i class="fab fa-facebook-f"></i> Facebook
         </a>
-        <a href="mailto:yousef@novar.com" class="link email">
+        <a href="mailto:yousef@novar.com" class="link">
             <i class="fas fa-envelope"></i> Contact Us
         </a>
     </div>
