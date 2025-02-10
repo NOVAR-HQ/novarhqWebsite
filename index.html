@@ -9,19 +9,16 @@
         /* Typography */
         @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
 
-        /* Color Palette (Elegant & Simple) */
-    :root {
-    --background-gradient: linear-gradient(to bottom, #2c3e50, #4a6572);
-    --deep-indigo: #ffffff;
-    --soft-lavender: #7b6ba3;
-    --muted-white: #ffffff;
-    --neutral-gray: #d4d4d4;
-    --hover-dark: #1f1a38;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --button-bg: #7b6ba3;
-    --button-hover: #5d4d89;
-}
+        /* Color Palette */
+        :root {
+            --background-gradient: linear-gradient(to bottom, #0a0a0a, #141414, #1e1e1e);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --button-bg: #222222;
+            --button-hover: #2e2e2e;
+            --icon-color: #ffffff;
+            --border-radius: 12px;
+        }
 
         /* Global Styles */
         body {
@@ -47,33 +44,50 @@
         }
 
         header img {
-            max-width: 140px;
+            max-width: 120px;
             height: auto;
             margin-bottom: 10px;
+            border-radius: 50%;
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-size: 2rem;
             font-weight: bold;
             margin: 10px 0;
-            letter-spacing: 1px;
             text-transform: uppercase;
-            color: var(--deep-indigo);
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text-secondary);
-            margin: 5px 0 25px;
+            margin-bottom: 20px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: var(--icon-color);
+            font-size: 1.4rem;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.7;
         }
 
         /* Link Container */
         .link-container {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             width: 100%;
-            max-width: 220px;
+            max-width: 250px;
         }
 
         /* Buttons */
@@ -82,14 +96,13 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: var(--muted-white);
+            color: var(--text-primary);
             background: var(--button-bg);
-            padding: 10px;
+            padding: 12px;
             font-size: 1rem;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: var(--border-radius);
             transition: all 0.3s ease-in-out;
-            text-transform: capitalize;
             width: 100%;
         }
 
@@ -114,16 +127,16 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
 
             .link {
                 font-size: 0.9rem;
-                padding: 9px;
+                padding: 10px;
             }
 
             header img {
-                max-width: 120px;
+                max-width: 100px;
             }
         }
     </style>
@@ -133,23 +146,19 @@
         <!-- Logo -->
         <img src="Novarlogo3v1.png" alt="NOVAR Logo">
         <h1>NOVAR</h1>
-        <p>Where Art Meets Science</p>
+        <p>A creative venture at the intersection of art and science.</p>
     </header>
 
-    <!-- Social Media Links -->
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://instagram.com/novarhq" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@novarhq" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://tiktok.com/@novarhq" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61572770470991" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <!-- Main Buttons -->
     <div class="link-container">
-        <a href="https://instagram.com/novarhq" target="_blank" class="link">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://tiktok.com/@novarhq" target="_blank" class="link">
-            <i class="fab fa-tiktok"></i> TikTok
-        </a>
-        <a href="https://youtube.com/@novarhq" target="_blank" class="link">
-            <i class="fab fa-youtube"></i> YouTube
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61572770470991" target="_blank" class="link">
-            <i class="fab fa-facebook-f"></i> Facebook
-        </a>
         <a href="mailto:yousef@novar.com" class="link">
             <i class="fas fa-envelope"></i> Contact Us
         </a>
