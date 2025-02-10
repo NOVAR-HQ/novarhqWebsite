@@ -8,20 +8,22 @@
         /* Typography */
         @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
 
+        /* Color Theme */
         :root {
-            --primary-color: #0066ff;
-            --hover-color: #0046b3;
-            --background-color: #141e30;
+            --primary-color: #007bff;
+            --hover-color: #0056b3;
+            --background-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             --text-color: #ffffff;
-            --text-secondary: #cccccc;
-            --shadow-color: rgba(0, 0, 0, 0.3);
+            --text-secondary: #b0b3b8;
+            --shadow-color: rgba(0, 0, 0, 0.4);
         }
 
+        /* Global Styles */
         body {
             font-family: 'Aptos', sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--background-color);
+            background: var(--background-gradient);
             color: var(--text-color);
             display: flex;
             flex-direction: column;
@@ -32,6 +34,7 @@
             overflow-x: hidden;
         }
 
+        /* Header */
         header {
             width: 100%;
             padding: 20px;
@@ -42,6 +45,7 @@
             max-width: 150px;
             height: auto;
             margin-bottom: 15px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         header h1 {
@@ -58,10 +62,11 @@
             margin: 5px 0 30px;
         }
 
+        /* Links */
         .link-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             width: 90%;
             max-width: 400px;
             animation: fadeIn 1.2s ease-in-out;
@@ -72,20 +77,24 @@
             color: var(--text-color);
             background: var(--primary-color);
             padding: 15px;
-            border-radius: 12px;
+            border-radius: 6px;
             font-size: 1.2rem;
             font-weight: bold;
-            box-shadow: 0 8px 12px var(--shadow-color);
+            box-shadow: 0 4px 8px var(--shadow-color);
             transition: all 0.3s ease-in-out;
             text-transform: capitalize;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .link:hover {
             background: var(--hover-color);
             transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
 
+        /* Footer */
         footer {
             margin-top: 40px;
             font-size: 0.9rem;
@@ -124,11 +133,13 @@
 </head>
 <body>
     <header>
-        <!-- Add your banner -->
+        <!-- Logo -->
         <img src="Novarlogo3v1.png" alt="NOVAR Logo">
         <h1>NOVAR</h1>
         <p>Where Art Meets Science</p>
     </header>
+
+    <!-- Social Media Links -->
     <div class="link-container">
         <a href="https://instagram.com/novarhq" target="_blank" class="link">Instagram</a>
         <a href="https://tiktok.com/@novarhq" target="_blank" class="link">TikTok</a>
@@ -136,6 +147,8 @@
         <a href="https://www.facebook.com/profile.php?id=61572770470991" target="_blank" class="link">Facebook</a>
         <a href="mailto:yousef@novar.com" class="link">Contact Us</a>
     </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 NOVAR | All Rights Reserved</p>
     </footer>
