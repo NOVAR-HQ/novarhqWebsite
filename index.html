@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOVAR | Where Art Meets Science</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
     <style>
         /* Typography */
         @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
 
         /* Color Theme */
         :root {
-            --primary-color: #007bff;
-            --hover-color: #0056b3;
-            --background-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --background-gradient: linear-gradient(135deg, #0a0f1d 0%, #1a2238 100%);
             --text-color: #ffffff;
             --text-secondary: #b0b3b8;
             --shadow-color: rgba(0, 0, 0, 0.4);
+
+            /* Button Colors */
+            --instagram: #E4405F;
+            --tiktok: #69C9D0;
+            --youtube: #FF0000;
+            --facebook: #1877F2;
+            --email: #FF7F50;
+            --hover-opacity: 0.9;
         }
 
         /* Global Styles */
@@ -62,34 +69,47 @@
             margin: 5px 0 30px;
         }
 
-        /* Links */
+        /* Link Container */
         .link-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            width: 90%;
-            max-width: 400px;
+            gap: 12px;
+            width: 100%;
+            max-width: 280px;
             animation: fadeIn 1.2s ease-in-out;
         }
 
+        /* Buttons */
         .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
             color: var(--text-color);
-            background: var(--primary-color);
-            padding: 15px;
-            border-radius: 6px;
-            font-size: 1.2rem;
+            padding: 12px;
+            font-size: 1rem;
             font-weight: bold;
-            box-shadow: 0 4px 8px var(--shadow-color);
+            border-radius: 6px;
             transition: all 0.3s ease-in-out;
             text-transform: capitalize;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            box-shadow: 0 4px 8px var(--shadow-color);
         }
 
+        .link i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Individual Button Colors */
+        .instagram { background: var(--instagram); }
+        .tiktok { background: var(--tiktok); }
+        .youtube { background: var(--youtube); }
+        .facebook { background: var(--facebook); }
+        .email { background: var(--email); }
+
+        /* Hover Effects */
         .link:hover {
-            background: var(--hover-color);
+            opacity: var(--hover-opacity);
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
@@ -121,8 +141,8 @@
             }
 
             .link {
-                font-size: 1rem;
-                padding: 12px;
+                font-size: 0.9rem;
+                padding: 10px;
             }
 
             header img {
@@ -141,16 +161,29 @@
 
     <!-- Social Media Links -->
     <div class="link-container">
-        <a href="https://instagram.com/novarhq" target="_blank" class="link">Instagram</a>
-        <a href="https://tiktok.com/@novarhq" target="_blank" class="link">TikTok</a>
-        <a href="https://youtube.com/@novarhq" target="_blank" class="link">YouTube</a>
-        <a href="https://www.facebook.com/profile.php?id=61572770470991" target="_blank" class="link">Facebook</a>
-        <a href="mailto:yousef@novar.com" class="link">Contact Us</a>
+        <a href="https://instagram.com/novarhq" target="_blank" class="link instagram">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://tiktok.com/@novarhq" target="_blank" class="link tiktok">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://youtube.com/@novarhq" target="_blank" class="link youtube">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61572770470991" target="_blank" class="link facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="mailto:yousef@novar.com" class="link email">
+            <i class="fas fa-envelope"></i> Contact Us
+        </a>
     </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 NOVAR | All Rights Reserved</p>
     </footer>
+
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
 </body>
 </html>
