@@ -9,15 +9,17 @@
         /* Typography */
         @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
 
-        /* Color Theme */
+        /* Color Palette (Elegant & Simple) */
         :root {
-            --background-gradient: linear-gradient(135deg, #1a0739 0%, #3d0c66 50%, #6b1b91 100%);
-            --primary-purple: #6b1b91;
-            --hover-purple: #4e1369;
-            --text-color: #ffffff;
-            --text-secondary: #b0b3b8;
-            --shadow-color: rgba(0, 0, 0, 0.4);
-            --hover-opacity: 0.85;
+            --deep-indigo: #2c234d;
+            --soft-lavender: #7b6ba3;
+            --muted-white: #f5f5f5;
+            --neutral-gray: #d4d4d4;
+            --hover-dark: #1f1a38;
+            --text-primary: #2c234d;
+            --text-secondary: #5a5377;
+            --button-bg: #7b6ba3;
+            --button-hover: #5d4d89;
         }
 
         /* Global Styles */
@@ -25,8 +27,8 @@
             font-family: 'Aptos', sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--background-gradient);
-            color: var(--text-color);
+            background: linear-gradient(to bottom, var(--muted-white), var(--neutral-gray));
+            color: var(--text-primary);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -44,34 +46,33 @@
         }
 
         header img {
-            max-width: 150px;
+            max-width: 140px;
             height: auto;
-            margin-bottom: 15px;
-            animation: fadeIn 1s ease-in-out;
+            margin-bottom: 10px;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: bold;
             margin: 10px 0;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
+            color: var(--deep-indigo);
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-secondary);
-            margin: 5px 0 30px;
+            margin: 5px 0 25px;
         }
 
         /* Link Container */
         .link-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             width: 100%;
-            max-width: 230px;
-            animation: fadeIn 1.2s ease-in-out;
+            max-width: 220px;
         }
 
         /* Buttons */
@@ -80,29 +81,25 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: var(--text-color);
-            background: var(--primary-purple);
+            color: var(--muted-white);
+            background: var(--button-bg);
             padding: 10px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: bold;
-            border-radius: 4px;
+            border-radius: 5px;
             transition: all 0.3s ease-in-out;
             text-transform: capitalize;
-            box-shadow: 0 3px 6px var(--shadow-color);
             width: 100%;
         }
 
         .link i {
             margin-right: 8px;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         /* Hover Effects */
         .link:hover {
-            background: var(--hover-purple);
-            opacity: var(--hover-opacity);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: var(--button-hover);
         }
 
         /* Footer */
@@ -113,22 +110,10 @@
             opacity: 0.8;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .link {
