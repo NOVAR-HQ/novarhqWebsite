@@ -1,143 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVAR | Where Art Meets Science</title>
-    <style>
-        /* Typography */
-        @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap');
+:root {
+            /* Uncomment any palette below to try different color schemes */
 
-        :root {
-    --primary-color: #8000ff; /* Accent Buttons */
-    --hover-color: #a64dff; /* Hover State */
-    --background-color: #0d0d0d; /* Dark Background */
-    --text-color: #e6e6e6; /* Main Text */
-    --text-secondary: #b3b3b3; /* Secondary Text */
-    --shadow-color: rgba(128, 0, 255, 0.3); /* Shadow Color */
-}
+            /* Monochrome Elegance */
+            /*
+            --primary-color: #4f4f4f;
+            --hover-color: #6f6f6f;
+            --background-color: #1a1a1a;
+            --text-color: #ffffff;
+            --text-secondary: #b3b3b3;
+            --shadow-color: rgba(255, 255, 255, 0.2);
+            */
 
-        body {
-            font-family: 'Aptos', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: var(--background-color);
-            color: var(--text-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            overflow-x: hidden;
+            /* Purple Glow */
+            --primary-color: #8000ff;
+            --hover-color: #a64dff;
+            --background-color: #0d0d0d;
+            --text-color: #e6e6e6;
+            --text-secondary: #b3b3b3;
+            --shadow-color: rgba(128, 0, 255, 0.3);
+
+            /* Cyberpunk Inspired */
+            /*
+            --primary-color: #ff007f;
+            --hover-color: #ff66b2;
+            --background-color: #1a1a1a;
+            --text-color: #e6e6e6;
+            --text-secondary: #cccccc;
+            --shadow-color: rgba(255, 0, 127, 0.3);
+            */
+
+            /* Minimal Earthy Tones */
+            /*
+            --primary-color: #10b981;
+            --hover-color: #34d399;
+            --background-color: #0f172a;
+            --text-color: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --shadow-color: rgba(16, 185, 129, 0.3);
+            */
+
+            /* Futuristic Teal */
+            /*
+            --primary-color: #14b8a6;
+            --hover-color: #2dd4bf;
+            --background-color: #0c1f28;
+            --text-color: #e0f7fa;
+            --text-secondary: #a7cfd9;
+            --shadow-color: rgba(20, 184, 166, 0.3);
+            */
         }
-
-        header {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header img {
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 10px 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin: 5px 0 30px;
-        }
-
-        .link-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 90%;
-            max-width: 400px;
-            animation: fadeIn 1.2s ease-in-out;
-        }
-
-        .link {
-            text-decoration: none;
-            color: var(--text-color);
-            background: var(--primary-color);
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            box-shadow: 0 8px 12px var(--shadow-color);
-            transition: all 0.3s ease-in-out;
-            text-transform: capitalize;
-        }
-
-        .link:hover {
-            background: var(--hover-color);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        footer {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            opacity: 0.8;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .link {
-                font-size: 1rem;
-                padding: 12px;
-            }
-
-            header img {
-                max-width: 120px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <!-- Add your banner -->
-        <img src="Novarlogo3v1.png" alt="NOVAR Logo">
-        <h1>NOVAR</h1>
-        <p>Where Art Meets Science</p>
-    </header>
-    <div class="link-container">
-        <a href="https://instagram.com/novarhq" target="_blank" class="link">Instagram</a>
-        <a href="https://tiktok.com/@novarhq" target="_blank" class="link">TikTok</a>
-        <a href="https://youtube.com/@novarhq" target="_blank" class="link">YouTube</a>
-        <a href="https://www.facebook.com/profile.php?id=61572770470991" target="_blank" class="link">Facebook</a>
-        <a href="mailto:yousef@novar.com" class="link">Contact Us</a>
-    </div>
-    <footer>
-        <p>&copy; 2025 NOVAR | All Rights Reserved</p>
-    </footer>
-</body>
-</html>
