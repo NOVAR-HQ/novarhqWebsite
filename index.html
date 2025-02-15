@@ -28,15 +28,10 @@
             left: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: top 0.3s;
         }
         .logo img {
             height: 50px;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            justify-content: center;
         }
         nav ul {
             list-style: none;
@@ -83,10 +78,6 @@
             text-align: center;
             animation: fadeIn 2s ease-in-out;
         }
-        .hero-content img {
-            height: 50px;
-            margin-bottom: 20px;
-        }
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
@@ -94,6 +85,32 @@
         p {
             font-size: 1.1rem;
             color: #555;
+        }
+        .projects {
+            padding: 50px 30px;
+            text-align: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .project-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+        .project-item img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         .contact-form {
             display: flex;
@@ -109,10 +126,6 @@
             font-size: 1rem;
             transition: all 0.3s ease-in-out;
         }
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: #f4a261;
-            outline: none;
-        }
         .contact-form button {
             background: linear-gradient(135deg, #f4a261, #e76f51);
             padding: 12px;
@@ -127,15 +140,11 @@
         .contact-form button:hover {
             background: #e76f51;
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0d3555;
+            color: white;
         }
     </style>
 </head>
@@ -144,19 +153,28 @@
         <div class="logo"><img src="NovarBannerNEWv1.png" alt="Novar Banner"></div>
         <nav>
             <ul>
-                <li><a href="#platforms">Platforms</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <a href="#contact" class="cta-button">Contact</a>
     </header>
     
     <section id="hero">
         <div class="hero-content">
-            <img src="Novarlogo4v5.png" alt="Novar Logo">
             <h1>Where Art Meets Technology</h1>
             <p>Bridging technology and creativity through film, cosplay, and innovation.</p>
-            <a href="#platforms" class="cta-button">Visit Our Platforms</a>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <h2>Our Projects</h2>
+        <div class="project-grid">
+            <a class="project-item" href="https://www.instagram.com/novarhq" target="_blank">
+                <img src="project-placeholder.jpg" alt="Project 1">
+            </a>
+            <a class="project-item" href="https://www.instagram.com/novarhq" target="_blank">
+                <img src="project-placeholder.jpg" alt="Project 2">
+            </a>
         </div>
     </section>
     
