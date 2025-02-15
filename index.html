@@ -29,12 +29,14 @@
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .logo {
-            flex-grow: 1;
-            text-align: center;
-        }
         .logo img {
             height: 50px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
         }
         nav ul {
             list-style: none;
@@ -67,38 +69,31 @@
         .cta-button:hover {
             background: #e76f51;
         }
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
+        #hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #f4f4f4, #eaeaea);
         }
-        .menu-toggle div {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 5px;
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: #0d3555;
-                padding: 10px 0;
-            }
-            nav ul.active {
-                display: flex;
-            }
-            .menu-toggle {
-                display: flex;
-            }
-        }
-        #hero img {
-            height: 80px;
+        .hero-content img {
+            height: 50px;
             margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #555;
         }
         .contact-form {
             display: flex;
@@ -132,23 +127,28 @@
         .contact-form button:hover {
             background: #e76f51;
         }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
         <div class="logo"><img src="NovarBannerNEWv1.png" alt="Novar Banner"></div>
         <nav>
             <ul>
                 <li><a href="#platforms">Platforms</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact" class="cta-button">Contact</a></li>
             </ul>
         </nav>
+        <a href="#contact" class="cta-button">Contact</a>
     </header>
     
     <section id="hero">
@@ -174,11 +174,5 @@
     <footer>
         <p>&copy; 2025 Novar. All rights reserved.</p>
     </footer>
-    
-    <script>
-        function toggleMenu() {
-            document.querySelector('nav ul').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
