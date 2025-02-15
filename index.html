@@ -29,37 +29,16 @@
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .logo {
-            flex-grow: 1;
-            text-align: center;
-        }
         .logo img {
             height: 50px;
             loading: lazy;
         }
-        .menu-toggle {
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: #fff;
-            cursor: pointer;
-        }
         .nav-links {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 20px;
-            background: #0d3555;
-            width: 200px;
-            padding: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .nav-links.active {
             display: flex;
-        }
-        .nav-links li {
             list-style: none;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
         }
         .nav-links li a {
             color: #fff;
@@ -67,13 +46,47 @@
             font-weight: 500;
             transition: color 0.3s;
             font-size: 16px;
-            display: block;
-            padding: 10px;
         }
         .nav-links li a:hover {
             color: #f4a261;
         }
+        .cta-button {
+            background: linear-gradient(135deg, #f4a261, #e76f51);
+            padding: 12px 25px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: background 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: none;
+        }
+        .cta-button:hover {
+            background: #e76f51;
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: #0d3555;
+                width: 200px;
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
             .menu-toggle {
                 display: block;
             }
@@ -97,19 +110,24 @@
             margin-bottom: 20px;
             loading: lazy;
         }
-        #platforms {
-            padding: 50px 20px;
-            text-align: center;
-            background: #fff;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
         }
-        #platforms h2 {
-            margin-bottom: 20px;
+        .contact-form button:hover {
+            background: #e76f51;
         }
         footer {
             text-align: center;
             padding: 20px;
             background: #0d3555;
             color: white;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
         }
         .back-to-top {
             display: block;
@@ -132,15 +150,15 @@
 </head>
 <body>
     <header>
-        <button class="menu-toggle">☰</button>
         <div class="logo"><img src="NovarBannerNEWv1.png" alt="Novar Banner"></div>
+        <button class="menu-toggle">☰</button>
         <nav>
             <ul class="nav-links">
                 <li><a href="#platforms">Platforms</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact" class="cta-button">Contact</a></li>
             </ul>
         </nav>
+        <a href="#contact" class="cta-button">Contact</a>
     </header>
     
     <section id="hero">
@@ -152,14 +170,24 @@
         </div>
     </section>
     
-    <section id="platforms">
-        <h2>Our Platforms</h2>
-        <p>Explore our different creative and technological ventures.</p>
-        <!-- You can add platform links here -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Want to collaborate? Reach out to us!</p>
+        <form class="contact-form" onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     
     <footer>
         <p>&copy; 2025 Novar. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#">📷</a>
+            <a href="#">🎥</a>
+            <a href="#">📘</a>
+        </div>
         <a href="#" class="back-to-top">Back to Top</a>
     </footer>
     
@@ -167,6 +195,14 @@
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
         });
+        function validateForm() {
+            let email = document.getElementById('email').value;
+            if (!email.includes('@')) {
+                alert('Please enter a valid email.');
+                return false;
+            }
+            return true;
+        }
     </script>
 </body>
 </html>
