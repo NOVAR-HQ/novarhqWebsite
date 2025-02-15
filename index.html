@@ -36,10 +36,6 @@
         .logo img {
             height: 50px;
         }
-        .menu {
-            display: flex;
-            align-items: center;
-        }
         nav ul {
             list-style: none;
             display: flex;
@@ -100,6 +96,42 @@
                 display: flex;
             }
         }
+        #hero img {
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+            gap: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #f4a261;
+            outline: none;
+        }
+        .contact-form button {
+            background: linear-gradient(135deg, #f4a261, #e76f51);
+            padding: 12px;
+            border: none;
+            border-radius: 30px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #e76f51;
+        }
     </style>
 </head>
 <body>
@@ -127,17 +159,7 @@
             <a href="#platforms" class="cta-button">Visit Our Platforms</a>
         </div>
     </section>
-
-    <section id="platforms">
-        <h2>Our Platforms</h2>
-        <p>Explore our creative and technological initiatives.</p>
-    </section>
-
-    <section id="blog">
-        <h2>Latest Blog Posts</h2>
-        <p>Stay updated with our latest articles and insights.</p>
-    </section>
-
+    
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Want to collaborate? Reach out to us!</p>
@@ -148,7 +170,7 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-
+    
     <footer>
         <p>&copy; 2025 Novar. All rights reserved.</p>
     </footer>
