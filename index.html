@@ -29,25 +29,13 @@
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .logo {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
         .logo img {
             height: 50px;
-        }
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
         }
         nav {
             display: flex;
             align-items: center;
+            flex-grow: 1;
             justify-content: center;
         }
         nav ul {
@@ -81,50 +69,78 @@
         .cta-button:hover {
             background: #e76f51;
         }
-        .section {
-            padding: 50px;
+        #hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            background: #fff;
-            margin: 20px auto;
-            max-width: 900px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #f4f4f4, #eaeaea);
         }
-        h2 {
-            color: #0d3555;
-            font-size: 2rem;
-            margin-bottom: 10px;
+        .hero-content {
+            max-width: 800px;
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero-content img {
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #555;
         }
         .contact-form {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            max-width: 500px;
+            margin: auto;
+            gap: 15px;
         }
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background: #0d3555;
-                text-align: center;
-                padding: 10px 0;
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #f4a261;
+            outline: none;
+        }
+        .contact-form button {
+            background: linear-gradient(135deg, #f4a261, #e76f51);
+            padding: 12px;
+            border: none;
+            border-radius: 30px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #e76f51;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            nav ul.show {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <button class="menu-toggle">☰</button>
         <div class="logo"><img src="NovarBannerNEWv1.png" alt="Novar Banner"></div>
         <nav>
             <ul>
@@ -135,26 +151,16 @@
         <a href="#contact" class="cta-button">Contact</a>
     </header>
     
-    <section id="hero" class="section">
-        <div>
-            <img src="Novarlogo4v5.png" alt="Novar Logo" style="height: 50px; margin-bottom: 20px;">
+    <section id="hero">
+        <div class="hero-content">
+            <img src="Novarlogo4v5.png" alt="Novar Logo">
             <h1>Where Art Meets Technology</h1>
             <p>Bridging technology and creativity through film, cosplay, and innovation.</p>
             <a href="#platforms" class="cta-button">Visit Our Platforms</a>
         </div>
     </section>
     
-    <section id="platforms" class="section">
-        <h2>Our Platforms</h2>
-        <p>Discover the different platforms where Novar shares projects, collaborations, and creative content.</p>
-    </section>
-    
-    <section id="blog" class="section">
-        <h2>Blog</h2>
-        <p>Stay updated with our latest insights, behind-the-scenes stories, and industry news.</p>
-    </section>
-    
-    <section id="contact" class="section">
+    <section id="contact">
         <h2>Contact Us</h2>
         <p>Want to collaborate? Reach out to us!</p>
         <form class="contact-form">
@@ -168,10 +174,5 @@
     <footer>
         <p>&copy; 2025 Novar. All rights reserved.</p>
     </footer>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
-        });
-    </script>
 </body>
 </html>
