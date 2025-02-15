@@ -11,12 +11,13 @@
 
         /* Color Palette */
         :root {
-            --background-gradient: linear-gradient(to bottom, #0a0a0a, #141414, #1e1e1e);
+            --background-color: #003a5d; /* Deep blue from banner */
             --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
-            --button-bg: #222222;
-            --button-hover: #2e2e2e;
+            --text-secondary: #c0d6e4; /* Lighter blue-gray for readability */
+            --button-bg: #004d73; /* Darker blue for buttons */
+            --button-hover: #006699; /* Slightly lighter blue for hover effect */
             --icon-color: #ffffff;
+            --highlight-color: #ffcc00; /* Yellow from the banner */
             --border-radius: 12px;
         }
 
@@ -25,7 +26,7 @@
             font-family: 'Aptos', sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--background-gradient);
+            background: var(--background-color);
             color: var(--text-primary);
             display: flex;
             flex-direction: column;
@@ -78,7 +79,7 @@
         }
 
         .social-icons a:hover {
-            opacity: 0.7;
+            color: var(--highlight-color);
         }
 
         /* Link Container */
@@ -114,6 +115,7 @@
         /* Hover Effects */
         .link:hover {
             background: var(--button-hover);
+            color: var(--highlight-color);
         }
 
         /* Footer */
@@ -144,7 +146,7 @@
 <body>
     <header>
         <!-- Logo -->
-        <img src="Novarlogo3v3.png" alt="NOVAR Logo">
+        <img src="Novarlogo4v5.png" alt="NOVAR Logo">
         <h1>NOVAR</h1>
         <p>A creative venture at the intersection of art and science.</p>
     </header>
@@ -180,8 +182,5 @@
     <footer>
         <p>&copy; 2025 NOVAR | All Rights Reserved</p>
     </footer>
-
-    <!-- FontAwesome for Icons -->
-    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
 </body>
 </html>
