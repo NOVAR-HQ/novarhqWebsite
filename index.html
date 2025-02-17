@@ -18,7 +18,6 @@
         }
         header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
             padding: 15px 30px;
             background: #0d3555;
@@ -28,18 +27,13 @@
             left: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .logo {
-            flex-grow: 1;
-            display: flex;
             justify-content: center;
         }
         .logo img {
             height: 50px;
         }
         nav {
-            display: flex;
-            align-items: center;
+            margin-right: auto;
         }
         nav ul {
             list-style: none;
@@ -109,6 +103,10 @@
             }
         }
         /* Contact Form */
+        #contact {
+            text-align: center;
+            padding: 50px 20px;
+        }
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -146,6 +144,8 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
+            position: absolute;
+            left: 20px;
         }
         .hamburger div {
             width: 30px;
