@@ -16,9 +16,12 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
+
+        /* HEADER */
         header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             padding: 15px 30px;
             background: #0d3555;
             position: fixed;
@@ -28,20 +31,22 @@
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .nav-container {
-            display: flex;
-            flex: 1;
-            align-items: center;
-            justify-content: space-between;
-        }
+
         .logo {
-            flex-grow: 1;
             display: flex;
             justify-content: center;
+            flex-grow: 1;
         }
+
         .logo img {
             height: 50px;
         }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -49,6 +54,7 @@
             padding: 0;
             margin: 0;
         }
+
         nav ul li a {
             color: #fff;
             text-decoration: none;
@@ -56,9 +62,12 @@
             transition: color 0.3s;
             font-size: 16px;
         }
+
         nav ul li a:hover {
             color: #f4a261;
         }
+
+        /* HERO */
         #hero {
             position: relative;
             height: 90vh;
@@ -67,22 +76,28 @@
             justify-content: center;
             text-align: center;
             background: linear-gradient(135deg, #f4f4f4, #eaeaea);
+            padding: 20px;
         }
+
         .hero-content {
             max-width: 800px;
             text-align: center;
             animation: fadeIn 2s ease-in-out;
         }
+
         .hero-content img {
             height: 50px;
             margin-bottom: 20px;
         }
+
         .social-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-top: 20px;
         }
+
         .social-buttons a {
             background: linear-gradient(135deg, #f4a261, #e76f51);
             padding: 12px 20px;
@@ -96,24 +111,17 @@
             text-align: center;
             font-size: 14px;
         }
+
         .social-buttons a:hover {
             background: #e76f51;
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        /* Contact Form */
+
+        /* CONTACT SECTION */
         #contact {
             text-align: center;
             padding: 50px 20px;
         }
+
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -121,17 +129,21 @@
             margin: auto;
             gap: 15px;
         }
+
         .contact-form input, .contact-form textarea {
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 1rem;
             transition: all 0.3s ease-in-out;
+            width: 100%;
         }
+
         .contact-form input:focus, .contact-form textarea:focus {
             border-color: #f4a261;
             outline: none;
         }
+
         .contact-form button {
             background: linear-gradient(135deg, #f4a261, #e76f51);
             padding: 12px;
@@ -142,22 +154,34 @@
             font-size: 1rem;
             transition: background 0.3s ease-in-out;
             cursor: pointer;
+            width: 100%;
         }
+
         .contact-form button:hover {
             background: #e76f51;
         }
-        /* Mobile menu */
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* HAMBURGER MENU */
         .hamburger {
             display: none;
             flex-direction: column;
             cursor: pointer;
         }
+
         .hamburger div {
             width: 30px;
             height: 3px;
             background-color: white;
             margin: 5px 0;
         }
+
         .mobile-menu {
             display: none;
             flex-direction: column;
@@ -169,36 +193,48 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-align: center;
         }
+
         .mobile-menu a {
             color: white;
             text-decoration: none;
             padding: 15px;
             display: block;
         }
+
         .mobile-menu a:hover {
             background: #f4a261;
         }
+
         @media (max-width: 768px) {
             nav ul {
                 display: none;
             }
+
             .hamburger {
                 display: flex;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <nav>
-                <ul>
-                    <li><a href="#platforms">Platforms</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                </ul>
-            </nav>
-            <div class="logo"><img src="NovarBannerNEWv1.png" alt="Novar Banner"></div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="logo"><img src="NovarBannerNEWv1.png" alt="Novar Banner"></div>
     </header>
 
     <section id="hero">
@@ -214,7 +250,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Want to collaborate? Reach out to us!</p>
@@ -225,20 +261,9 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 Novar. All rights reserved.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("mobileMenu");
-            if (menu.style.display === "flex") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "flex";
-            }
-        }
-    </script>
 </body>
 </html>
