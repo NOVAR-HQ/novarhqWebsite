@@ -8,7 +8,11 @@
     <script defer>
         function toggleMenu() {
             var menu = document.getElementById("mobileMenu");
-            menu.classList.toggle("active");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
         }
     </script>
     <style>
@@ -204,21 +208,6 @@
             text-align: center;
         }
 
-        .mobile-menu.active {
-            display: flex;
-        }
-
-        .mobile-menu a {
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            display: block;
-        }
-
-        .mobile-menu a:hover {
-            background: #f4a261;
-        }
-
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -226,11 +215,6 @@
 
             .hamburger {
                 display: flex;
-            }
-
-            .social-buttons {
-                flex-direction: column;
-                align-items: center;
             }
         }
     </style>
@@ -273,10 +257,10 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Want to collaborate? Reach out to us!</p>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form action="https://formsubmit.co/yousef@novarhq.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
